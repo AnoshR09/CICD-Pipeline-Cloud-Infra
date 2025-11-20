@@ -13,9 +13,21 @@ It demonstrates an end-to-end DevOps pipeline including:
 
 ---
 
-## 🧱 Terraform Infrastructure (Day 1–3)
 ### Completed:
+## 🧱 Terraform Infrastructure (Day 1–3)
 - [x] Terraform project initialized  
 - [x] VPC creation  
 - [x] Subnets creation  
 - [x] Internet Gateway 
+
+(Day 2)
+### Completed:
+## 🧱 Terraform Infrastructure
+- [x] Route Tables
+- [x] Associated Subnets with route table  
+- [x] Security Groups
+
+## 🐳 Docker
+- [x] Selected sample application  
+- [x] Dockerfile written  
+- [x] Container built and tested locally
