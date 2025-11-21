@@ -1,4 +1,5 @@
-/*This is a simple calculator app*/
+/*This is a simple calculator app and testing GitHub Actions*/
+
 
 import javax.swing.*;
 import java.awt.*;
