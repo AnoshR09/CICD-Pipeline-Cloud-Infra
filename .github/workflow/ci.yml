@@ -1,4 +1,4 @@
-Name : "My first CI workflow using GitHub Actions"
+name : "My first CI workflow using GitHub Actions"
 
 on: [push]
 
