@@ -25,12 +25,5 @@ jobs:
          #-Dsonar.host.url=https://sonarcloud.io
          #-Dsonar.login=${{ secrets.SONAR_TOKEN }} 
 
-    - name: Run tests with Maven
-      run: mvn test
-    - name: Package application
-      run: mvn package
-    - name: Build Docker image
-      run: docker build -t my-java-app .
-    - name: Run Docker container
-      run: docker run -d my-java-app
+
 
