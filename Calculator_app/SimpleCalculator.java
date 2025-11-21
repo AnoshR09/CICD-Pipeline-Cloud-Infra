@@ -1,4 +1,4 @@
-/*Simple Calculator*/
+/*Simple Calculator.*/
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
