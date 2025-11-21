@@ -11,7 +11,7 @@ COPY Calculator_app/SimpleCalculator.java /app/SimpleCalculator.java
 RUN javac SimpleCalculator.java
 
 #Expose port 8000
-EXPOSE 8000
+#EXPOSE 8000
 
 #Command to run the Java application
 CMD ["java", "SimpleCalculator"]
