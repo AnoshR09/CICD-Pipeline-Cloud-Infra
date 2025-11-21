@@ -17,14 +17,14 @@ jobs:
     - name: Build with Maven
       run: mvn clean install
 
-    - name: perform code analysis with SonarQube
-      uses: sonarsource/sonarcloud-github-action@master
-      with:
-       args: >
-         -Dsonar.projectKey=your_project_key
-         -Dsonar.organization=your_organization
-         -Dsonar.host.url=https://sonarcloud.io
-         -Dsonar.login=${{ secrets.SONAR_TOKEN }}
+   # - name: perform code analysis with SonarQube
+    #  uses: sonarsource/sonarcloud-github-action@master
+     # with:
+      # args: >
+       #  -Dsonar.projectKey=your_project_key
+        # -Dsonar.organization=your_organization
+         #-Dsonar.host.url=https://sonarcloud.io
+         #-Dsonar.login=${{ secrets.SONAR_TOKEN }} 
 
     - name: Run tests with Maven
       run: mvn test
