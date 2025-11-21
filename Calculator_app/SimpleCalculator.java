@@ -1,3 +1,5 @@
+/*This is a simple calculator app*/
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
