@@ -1,4 +1,4 @@
-/*This is a simple calculator app and testing GitHub Actions.*/
+/*This is a simple calculator app and testing GitHub Actions*/
 
 
 import javax.swing.*;
