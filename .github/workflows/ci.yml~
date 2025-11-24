@@ -21,7 +21,6 @@ jobs:
       run: |
         cd Calculator_app
         ls -la *.class
-        
 
    # - name: perform code analysis with SonarQube
     #  uses: sonarsource/sonarcloud-github-action@master
