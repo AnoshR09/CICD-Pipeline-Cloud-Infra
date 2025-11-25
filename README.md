@@ -31,3 +31,24 @@ It demonstrates an end-to-end DevOps pipeline including:
 - [x] Selected sample application  
 - [x] Dockerfile written  
 - [x] Container built and tested locally
+
+## 📅 Day 3 Progress — DevOps Transformation Challenge
+
+### ✔ CI Pipeline (GitHub Actions)
+- Implemented a CI workflow under `.github/workflows/ci.yml`
+- Automated Docker image build on every push to `main`
+- Added basic workflow structure for future tests and artifact handling
+
+### ✔ AWS ECR Integration
+- Created an Amazon ECR repository for storing application container images
+- Successfully authenticated and pushed the Docker image to ECR
+- Prepared the image for deployment in upcoming Terraform workflows
+
+### ✔ Terraform Infrastructure Enhancements
+- Added IAM Role configuration for EC2 instance access (SSM, CloudWatch, ECR read access)
+- Integrated IAM role setup into Terraform module structure
+- Updated `main.tf` and supporting files accordingly
+
+### ✔ Repository & Documentation
+- Updated README and code structure to reflect new components
+- Committed all Day 3 changes to GitHub
