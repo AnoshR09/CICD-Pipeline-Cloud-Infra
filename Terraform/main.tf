@@ -1,6 +1,6 @@
 #Step 1: Creation of VPC
 resource "aws_vpc" "vpc1" {
-    cidr_block = "10.0.0.0.16"
+    cidr_block = "10.0.0.0/16"
     tags = {
         Name = var.vpc_name
     }
@@ -56,7 +56,7 @@ resource "aws_security_group_rule" "allow_ssh" {
     from_port = 22
     to_port = 22
     protocol = "tcp"
-    cidr_ipv4 = aws_vpc.vpc1.cidr_block
+    cidr_blocks = [aws_vpc.vpc1.cidr_block]
     security_group_id = aws_security_group.mySG.id
 }
 resource "aws_security_group_rule" "allow_http" {
@@ -64,7 +64,7 @@ resource "aws_security_group_rule" "allow_http" {
     from_port = 80
     to_port = 80
     protocol = "tcp"
-    cidr_ipv4 = aws_vpc.vpc1.cidr_block
+    cidr_blocks = [aws_vpc.vpc1.cidr_block]
     security_group_id = aws_security_group.mySG.id
 }
 #allow all outbound traffic  
@@ -73,10 +73,20 @@ resource "aws_security_group_rule" "allow_all_outbound" {
     from_port = 0
     to_port = 0
     protocol = "-1"
-    cidr_ipv4 = "0.0.0.0/0"
+    cidr_blocks = ["0.0.0.0/0"]
     security_group_id = aws_security_group.mySG.id  
 }
 
+resource "aws_instance" "my_instance" {
+    ami           = "ami-12345678"
+    instance_type = "t2.micro"
+    subnet_id     = aws_subnet.PublicSubnet.id
+  
+    # Reference the IAM instance profile from iam.tf
+    iam_instance_profile = aws_iam_instance_profile.ec2_profile.name
+  
+    vpc_security_group_ids = [aws_security_group.mySG.id]
+}
 
 
 
