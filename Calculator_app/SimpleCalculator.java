@@ -105,6 +105,16 @@ public class SimpleCalculator extends JFrame implements ActionListener {
     }
 
     public static void main(String[] args) {
-        SwingUtilities.invokeLater(() -> new SimpleCalculator());
+        if (GraphicsEnvironment.isHeadless()) {
+            System.out.println("Calculator running in headless mode - GUI not available");
+            System.out.println("Application started successfully!");
+            try {
+                Thread.sleep(Long.MAX_VALUE);
+            } catch (InterruptedException e) {
+                System.out.println("Application interrupted");
+            }
+        } else {
+            SwingUtilities.invokeLater(() -> new SimpleCalculator());
+        }
     }
 }

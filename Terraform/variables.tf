@@ -16,3 +16,15 @@ variable "ineternetgateway_name"{
     type = string
     default = "myTerraformigw"
 }  
+ 
+variable "instance_name"{
+    description = "value of instance Name tag"
+    type = string
+    default = "Infra-Project"
+}
+
+variable "s3_bucket_name"{
+    description = "Name of the S3 bucket"
+    type = string
+    default = "infra-project-bucket-1234567890"
+}
